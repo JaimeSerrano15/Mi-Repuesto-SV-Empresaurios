@@ -32,7 +32,6 @@ import { DashboardSidebarSection } from './dashboard-sidebar-section';
 import { OrganizationPopover } from './organization-popover';
 // Icons
 import GavelIcon from '@mui/icons-material/Gavel';
-
 const getSections = (t) => [
   {
     title: t('General'),
