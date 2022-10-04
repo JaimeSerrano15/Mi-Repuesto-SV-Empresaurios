@@ -31,7 +31,7 @@ export const PaginationWidget = (props) => {
         )}
       />
       <Typography component="p" variant="body1" color="text.light">
-        Showing: {page * rowsPerPage + 1} - {( rowsPerPage )}{" "}
+        Showing: {page * rowsPerPage + 1} - {( rowsPerPage  * page + rowsPerPage > count ? count : rowsPerPage  * page + rowsPerPage   )}{" "}
         from {count} Total
       </Typography>
     </Box>
