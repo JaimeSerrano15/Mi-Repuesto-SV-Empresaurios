@@ -5,7 +5,6 @@ import {
 } from '@mui/material'
 
 export const Product = ({ product }) => {
-    console.log({product})
 
     return(
         <Box
@@ -17,18 +16,17 @@ export const Product = ({ product }) => {
                 maxHeight: '490px',
                 borderRadius: '5px',
                 cursor: 'pointer',
-                border: '1px solid rgba(0, 0, 0, 0.3)',
-                shadowBox: 'box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
-                "&:hover": {
+                boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',           
+                  "&:hover": {
                     transform: "scale(1.02)",
                     transition: "all .2s ease-in-out"
                 },
             }}
         >
             <Typography
-                variant="h4"
+                variant="h6"
                 sx={{
-                    minHeight: '160px'
+                    minHeight: '80px'
                 }}
             >
                 {product.name}
@@ -36,7 +34,8 @@ export const Product = ({ product }) => {
             <Typography
                 variant="body2"
                 sx={{
-                    textAlign: 'justify'
+                    textAlign: 'justify',
+                    minHeight: '64px'
                 }}
             >
                 {product.description}
@@ -49,7 +48,14 @@ export const Product = ({ product }) => {
             >
                 ${Number(product.price)}
             </Typography>
-            <img src={product.img} alt={product.name} width="250px" height="200px" />
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                }}
+            >
+                <img src={product.img} alt={product.name} width="200px" height="150px" />
+            </Box>
         </Box>
     )
 }
