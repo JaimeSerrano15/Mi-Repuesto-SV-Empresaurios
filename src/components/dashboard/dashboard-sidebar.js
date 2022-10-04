@@ -43,7 +43,7 @@ const getSections = (t) => [
       },
       {
         title: t('Productos'),
-        path: '/dashboard/analytics',
+        path: '/productos',
         icon: <ShoppingCartIcon fontSize="small" />
       },
       {

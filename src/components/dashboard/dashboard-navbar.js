@@ -17,7 +17,6 @@ import { Bell as BellIcon } from '../../icons/bell';
 import { Search as SearchIcon } from '../../icons/search';
 import { UserCircle as UserCircleIcon } from '../../icons/user-circle';
 import { Users as UsersIcon } from '../../icons/users';
-import { AccountPopover } from './account-popover';
 import { ContactsPopover } from './contacts-popover';
 import { ContentSearchDialog } from './content-search-dialog';
 import { NotificationsPopover } from './notifications-popover';
