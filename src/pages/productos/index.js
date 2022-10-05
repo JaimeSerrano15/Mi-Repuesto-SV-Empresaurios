@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import NextLink from 'next/link'
 import Head from 'next/head';
 import {
   Box,
@@ -12,7 +13,8 @@ import { DashboardLayout } from '../../components/dashboard/dashboard-layout';
 // Components
 import { Product } from '../../components/Product';
 import { Searchbar } from '../../components/Searchbar';
-import { PaginationWidget } from '../../components/Pagination'
+import { PaginationWidget } from '../../components/Pagination';
+import { FilterMenu } from '../../components/FilterMenu';
 
 import { hardCodedData } from '../../helpers/exampleData'
 
@@ -22,11 +24,13 @@ import { applyFilters, applyPagination } from '../../helpers/filter-helpers'
 const Products = () => {
   const [search, setSearch] = useState("")
   const [page, setPage] = useState(0)
+  const [filter, setFilter] = useState("Todas")
 
-  const filteredProducts = applyFilters(hardCodedData, search);
+  const filteredProducts = filter === "Todas" ? hardCodedData : hardCodedData.filter(product => product.category === filter )
+  const searchedProducts = applyFilters(filteredProducts, search);
 
   const paginatedProducts = applyPagination(
-    filteredProducts,
+    searchedProducts,
     page,
     9
   );
@@ -58,13 +62,22 @@ const Products = () => {
           </Typography>
           <Box
             sx={{
-              width: '40%',
+              width: '60%',
+              display: 'flex',
+              alignItems: 'center',
+              jusifyContent: 'space-between',
             }}
           >
             <Searchbar 
               search={search}
               setSearch={setSearch}
               placeholder="Busca el nombre de un producto"
+            />
+            <FilterMenu 
+              filter={filter}
+              setFilter={setFilter}
+              options={["Todos", "Carrocería", "Luces", "Cristales"]}
+              title="Filtros"
             />
           </Box>
         </Box>
@@ -77,9 +90,13 @@ const Products = () => {
           >
               {
                 paginatedProducts && paginatedProducts.map((item, i) => (
-                  <Grid item key={i} xs={4}>
-                      <Product product={item} />
-                  </Grid>
+                    <NextLink 
+                      href={`/productos/${i}/`}
+                    >
+                      <Grid item key={i} xs={4}>
+                          <Product product={item} />
+                      </Grid>
+                    </NextLink>
                 )) 
               }
           </Grid>

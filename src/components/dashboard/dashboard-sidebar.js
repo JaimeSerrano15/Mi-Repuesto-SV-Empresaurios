@@ -37,8 +37,8 @@ const getSections = (t) => [
     title: t('General'),
     items: [
       {
-        title: t('Home'),
-        path: '/dashboard',
+        title: t('Inicio'),
+        path: '/',
         icon: <HomeIcon fontSize="small" />
       },
       {
@@ -48,12 +48,12 @@ const getSections = (t) => [
       },
       {
         title: t('Subastas'),
-        path: '/dashboard/finance',
+        path: '/subastas',
         icon: <GavelIcon fontSize="small" />
       },
       {
         title: t('Favoritos'),
-        path: '/dashboard/logistics',
+        path: '/favoritos',
         icon: <TruckIcon fontSize="small" />,
         // chip: <Chip
         //   color="secondary"
@@ -72,7 +72,7 @@ const getSections = (t) => [
       },
       {
         title: t('Mi Perfil'),
-        path: '/dashboard/account',
+        path: '/perfil',
         icon: <UserCircleIcon fontSize="small" />
       }
     ]

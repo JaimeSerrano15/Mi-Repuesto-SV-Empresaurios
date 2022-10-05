@@ -57,11 +57,9 @@ const Overview = () => {
     <>
       <Head>
         <title>
-          Dashboard: Overview | Material Kit Pro
+            Mi Repuesto SV | Inicio  
         </title>
       </Head>
-
-      Cader la mama
 
     </>
   );

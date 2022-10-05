@@ -18,6 +18,7 @@ export const Searchbar = (props) => {
       sx={{
         flexGrow: 1,
         py: 1.875,
+        mx: 4,
       }}
     >
       <TextField

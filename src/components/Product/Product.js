@@ -23,14 +23,26 @@ export const Product = ({ product }) => {
                 },
             }}
         >
-            <Typography
-                variant="h6"
+            <Box
                 sx={{
                     minHeight: '80px'
                 }}
             >
-                {product.name}
-            </Typography>
+                <Typography
+                    variant="h6"
+                >
+                    {product.name}
+                </Typography>
+                <Typography
+                    variant="body2"
+                    color="neutral.500"
+                    sx={{
+                        minHeight: '80px'
+                    }}
+                >
+                    {product.category}
+                </Typography>
+            </Box>
             <Typography
                 variant="body2"
                 sx={{
