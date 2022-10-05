@@ -46,7 +46,6 @@ export const JWTLogin = (props) => {
     }
   });
 
-  
   return (
     <form
       noValidate
