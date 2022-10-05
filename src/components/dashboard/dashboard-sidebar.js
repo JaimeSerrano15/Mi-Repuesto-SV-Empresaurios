@@ -31,8 +31,12 @@ import { Logo } from '../logo';
 import { Scrollbar } from '../scrollbar';
 import { DashboardSidebarSection } from './dashboard-sidebar-section';
 import { OrganizationPopover } from './organization-popover';
+import { useAuth } from '../../hooks/use-auth';
+
 // Icons
 import GavelIcon from '@mui/icons-material/Gavel';
+import { useDispatch } from "react-redux";
+
 const getSections = (t) => [
   {
     // title: t('General'), TODO: search for a better name, or display none
@@ -296,6 +300,19 @@ export const DashboardSidebar = (props) => {
   const sections = useMemo(() => getSections(t), [t]);
   const organizationsRef = useRef(null);
   const [openOrganizationsPopover, setOpenOrganizationsPopover] = useState(false);
+  const { logout } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      router.push('/authentication/login').catch(console.error);
+    } catch (err) {
+      console.error(err);
+      toast.error('Unable to logout.');
+    }
+  };
+
+
 
   const handlePathChange = () => {
     if (!router.isReady) {
@@ -374,18 +391,31 @@ export const DashboardSidebar = (props) => {
                 {...section} />
             ))}
           </Box>
-          <Divider
+          {/* <Divider
             sx={{
               borderColor: '#2D3748'  // dark divider
             }}
-          />
+          /> */}
         </Box>
+        <Button
+        onClick={handleLogout}
+        variant="outlined"
+        sx={{
+          position: 'absolute',
+          bottom: '5%',
+          left: '10%',
+          width:'80%',
+        }}
+        >
+          SALIR
+        </Button>
       </Scrollbar>
-      <OrganizationPopover
+      {/* <OrganizationPopover
         anchorEl={organizationsRef.current}
         onClose={handleCloseOrganizationsPopover}
         open={openOrganizationsPopover}
-      />
+      /> */}
+     
     </>
   );
 

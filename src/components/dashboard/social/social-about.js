@@ -18,6 +18,7 @@ import { Briefcase as BriefcaseIcon } from '../../../icons/briefcase';
 import { Home as HomeIcon } from '../../../icons/home';
 import { Mail as MailIcon } from '../../../icons/mail';
 
+
 export const SocialAbout = (props) => {
   const {
     currentCity,
