@@ -24,6 +24,7 @@ import { ShoppingBag as ShoppingBagIcon } from '../../icons/shopping-bag';
 import { ShoppingCart as ShoppingCartIcon } from '../../icons/shopping-cart';
 import { Truck as TruckIcon } from '../../icons/truck';
 import { UserCircle as UserCircleIcon } from '../../icons/user-circle';
+import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import { Users as UsersIcon } from '../../icons/users';
 import { XCircle as XCircleIcon } from '../../icons/x-circle';
 import { Logo } from '../logo';
@@ -34,7 +35,7 @@ import { OrganizationPopover } from './organization-popover';
 import GavelIcon from '@mui/icons-material/Gavel';
 const getSections = (t) => [
   {
-    title: t('General'),
+    // title: t('General'), TODO: search for a better name, or display none
     items: [
       {
         title: t('Inicio'),
@@ -54,7 +55,7 @@ const getSections = (t) => [
       {
         title: t('Favoritos'),
         path: '/favoritos',
-        icon: <TruckIcon fontSize="small" />,
+        icon: <BookmarksIcon fontSize="small" />,
         // chip: <Chip
         //   color="secondary"
         //   label={(
@@ -337,7 +338,7 @@ export const DashboardSidebar = (props) => {
         >
           <div>
             <Box sx={{ p: 3 }}>
-              <NextLink
+              {/* <NextLink
                 href="/"
                 passHref
               >
@@ -348,8 +349,9 @@ export const DashboardSidebar = (props) => {
                       width: 42
                     }}
                   />
-                </a>
-              </NextLink>
+                </a> 
+                TODO: Add our own logo
+              </NextLink> */}
             </Box>
           </div>
           <Divider

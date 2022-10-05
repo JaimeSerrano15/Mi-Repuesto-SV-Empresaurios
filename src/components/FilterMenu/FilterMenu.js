@@ -69,7 +69,7 @@ export const FilterMenu = (props) => {
         sx={{
           backgroundColor: "#F8FAFB",
           borderRadius: "10px",
-          border: "none",
+          border: '1px solid gray',
           color: "#7E7E7E",
           py: 1,
           px: 2,

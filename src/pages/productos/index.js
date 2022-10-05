@@ -73,17 +73,22 @@ const Products = () => {
             <FilterMenu 
               filter={filter}
               setFilter={setFilter}
-              options={["Todos", "Carrocería", "Luces", "Cristales"]}
-              title="Filtros"
+              options={["Todas", "Carrocería", "Luces", "Cristales"]}
+              title="Categoría"
             />
           </Box>
         </Box>
+        <Box
+          sx={{
+            mb: 4, 
+            p: 2,
+            borderRadius: '5px',
+            backgroundColor: 'white',
+          }}
+        >
           <Grid 
             container 
             spacing={4}
-            sx={{
-              mb: 4
-            }}
           >
               {
                 paginatedProducts && paginatedProducts.map((item, i) => (
@@ -98,6 +103,7 @@ const Products = () => {
                 )) 
               }
           </Grid>
+        </Box>
 
           <PaginationWidget
             count={filteredProducts.length}

@@ -59,13 +59,17 @@ const ProductDetail = () => {
                     item 
                     xs={6}
                     sx={{
-                        pt: 4
+                        p: 4
+
                     }}
                 > 
                     <Typography
                         variant="h5"
+                        sx={{
+                            mb: 2,
+                        }}
                     >
-                        Description
+                        Descripción
                     </Typography>
                     <Typography
                         variant="body1"
@@ -77,6 +81,37 @@ const ProductDetail = () => {
                     >
                         ${hardCodedData[productId].price}
                     </Typography>
+
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            justifyContent: 'start',
+                            mt: 4
+                        }}
+                    >
+                        <Button
+                            variant="contained"
+                            sx={{
+                                mx: 1,
+                                py: 1.5,
+                                width: '225px',
+                                fontSize: '1rem'
+                            }}
+
+                        > Agregar a favoritos </Button>
+                        <Button
+                            variant="contained"
+                            color="success"
+                            sx={{
+                                mx: 1,
+                                py: 1.5,
+                                width: '225px',
+                                fontSize: '1rem'
+                            }}
+                        > 
+                            Comprar 
+                        </Button>
+                    </Box>
                 </Grid>
             </Grid>
         </Box>

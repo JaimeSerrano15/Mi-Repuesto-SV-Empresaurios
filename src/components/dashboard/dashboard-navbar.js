@@ -79,11 +79,11 @@ const LanguageButton = () => {
           />
         </Box>
       </IconButton>
-      <LanguagePopover
+      {/* <LanguagePopover
         anchorEl={anchorRef.current}
         onClose={handleClosePopover}
         open={openPopover}
-      />
+      /> */}
     </>
   );
 };
@@ -273,10 +273,12 @@ export const DashboardNavbar = (props) => {
             <MenuIcon fontSize="small" />
           </IconButton>
           <Box sx={{ flexGrow: 1 }} />
-          <LanguageButton />
-          <ContentSearchButton />
-          <ContactsButton />
-          <NotificationsButton />
+          {/* <LanguageButton /> */}
+          {/* <ContentSearchButton /> */}
+          {/* This can be a chat button */}
+          {/* <ContactsButton /> */}
+          {/* TODO Add this functionality latter, when we can handle notifications */}
+          {/* <NotificationsButton /> */}
         </Toolbar>
       </DashboardNavbarRoot>
     </>
