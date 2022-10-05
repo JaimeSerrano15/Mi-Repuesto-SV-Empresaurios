@@ -13,8 +13,8 @@
     "lint-fix": "next lint --fix"
   },
   "engines" : { 
-    "npm" : ">=8.0.0 <9.0.0",
-    "node" : ">=16.0.0 < 17.1.0"
+    "npm" : "8.1.3",
+    "node" : "17.0.1"
   },
   "browserslist": {
     "production": [

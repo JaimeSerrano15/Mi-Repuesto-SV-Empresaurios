@@ -13,7 +13,6 @@ import { Product } from '../../components/Product';
 import { Searchbar } from '../../components/Searchbar';
 import { PaginationWidget } from '../../components/Pagination';
 import { FilterMenu } from '../../components/FilterMenu';
-
 import { hardCodedData } from '../../helpers/exampleData'
 
 // Helpers
