@@ -13,7 +13,7 @@ export const Product = ({ product }) => {
                 flexDirection: 'column',
                 backgroundColor: 'white',
                 p: 2,
-                maxHeight: '490px',
+                height: '500px',
                 borderRadius: '5px',
                 cursor: 'pointer',
                 boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',           
@@ -25,7 +25,7 @@ export const Product = ({ product }) => {
         >
             <Box
                 sx={{
-                    minHeight: '80px'
+                    maxHeight: '120px'
                 }}
             >
                 <Typography
