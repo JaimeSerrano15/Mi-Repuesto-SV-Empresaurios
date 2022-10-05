@@ -4,7 +4,6 @@ import Head from 'next/head';
 import {
   Box,
   Typography,
-  Button,
   Grid
 } from '@mui/material';
 import { AuthGuard } from '../../components/authentication/auth-guard';
