@@ -66,19 +66,6 @@ const Login = () => {
                 justifyContent: 'center'
               }}
             >
-              <NextLink
-                href="/"
-                passHref
-              >
-                <a>
-                  <Logo
-                    sx={{
-                      height: 40,
-                      width: 40
-                    }}
-                  />
-                </a>
-              </NextLink>
               <Typography variant="h4">
                 Inicio de sesión
               </Typography>
