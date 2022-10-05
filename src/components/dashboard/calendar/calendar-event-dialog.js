@@ -205,7 +205,7 @@ export const CalendarEventDialog = (props) => {
             /> */}
           </Box>
           <Box sx={{ mt: 2 }}>
-            <DateTimePicker
+            {/* <DateTimePicker
               label="End date"
               onChange={handleEndDateChange}
               renderInput={(inputProps) => (
@@ -214,7 +214,7 @@ export const CalendarEventDialog = (props) => {
                   {...inputProps} />
               )}
               value={formik.values.end}
-            />
+            /> */}
           </Box>
           {Boolean(formik.touched.end && formik.errors.end) && (
             <Box sx={{ mt: 2 }}>
