@@ -92,8 +92,9 @@ const Products = () => {
                 paginatedProducts && paginatedProducts.map((item, i) => (
                     <NextLink 
                       href={`/productos/${i}/`}
+                      key={i}
                     >
-                      <Grid item key={i} xs={4}>
+                      <Grid item  xs={4}>
                           <Product product={item} />
                       </Grid>
                     </NextLink>
