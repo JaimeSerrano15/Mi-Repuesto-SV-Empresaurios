@@ -65,7 +65,7 @@ export const JWTRegister = (props) => {
         error={Boolean(formik.touched.name && formik.errors.name)}
         fullWidth
         helperText={formik.touched.name && formik.errors.name}
-        label="Name"
+        label="Nombre completo"
         margin="normal"
         name="name"
         onBlur={formik.handleBlur}
@@ -76,7 +76,7 @@ export const JWTRegister = (props) => {
         error={Boolean(formik.touched.email && formik.errors.email)}
         fullWidth
         helperText={formik.touched.email && formik.errors.email}
-        label="Email Address"
+        label="Correo Electrónico"
         margin="normal"
         name="email"
         onBlur={formik.handleBlur}
@@ -88,7 +88,7 @@ export const JWTRegister = (props) => {
         error={Boolean(formik.touched.password && formik.errors.password)}
         fullWidth
         helperText={formik.touched.password && formik.errors.password}
-        label="Password"
+        label="Contraseña"
         margin="normal"
         name="password"
         onBlur={formik.handleBlur}
@@ -96,7 +96,7 @@ export const JWTRegister = (props) => {
         type="password"
         value={formik.values.password}
       />
-      <Box
+      {/* <Box
         sx={{
           alignItems: 'center',
           display: 'flex',
@@ -122,7 +122,8 @@ export const JWTRegister = (props) => {
             Terms and Conditions
           </Link>
         </Typography>
-      </Box>
+      </Box> */}
+      {/* TODO: PODEMOS CREAR LUEGO NUESTROS PROPIOS TERMINOS Y CONDICIONES */}
       {Boolean(formik.touched.policy && formik.errors.policy) && (
         <FormHelperText error>
           {formik.errors.policy}
@@ -143,7 +144,7 @@ export const JWTRegister = (props) => {
           type="submit"
           variant="contained"
         >
-          Register
+          Registrarse
         </Button>
       </Box>
     </form>

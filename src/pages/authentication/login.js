@@ -80,14 +80,7 @@ const Login = () => {
                 </a>
               </NextLink>
               <Typography variant="h4">
-                Log in
-              </Typography>
-              <Typography
-                color="textSecondary"
-                sx={{ mt: 2 }}
-                variant="body2"
-              >
-                Sign in on the internal platform
+                Inicio de sesión
               </Typography>
             </Box>
             <Box
@@ -113,7 +106,7 @@ const Login = () => {
                   color="textSecondary"
                   variant="body2"
                 >
-                  Create new account
+                  ¿Eres nuevo? ¡Crea una cuenta aquí!
                 </Link>
               </NextLink>
             </div>
