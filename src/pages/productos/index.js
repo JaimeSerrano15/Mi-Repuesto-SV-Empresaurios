@@ -8,7 +8,6 @@ import {
 } from '@mui/material';
 import { AuthGuard } from '../../components/authentication/auth-guard';
 import { DashboardLayout } from '../../components/dashboard/dashboard-layout';
-
 // Components
 import { Product } from '../../components/Product';
 import { Searchbar } from '../../components/Searchbar';
