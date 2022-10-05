@@ -20,18 +20,18 @@ export const JWTRegister = (props) => {
     validationSchema: Yup.object({
       email: Yup
         .string()
-        .email('Must be a valid email')
+        .email('El correo debe der valido')
         .max(255)
-        .required('Email is required'),
+        .required('Debe ingresar su correo '),
       name: Yup
         .string()
         .max(255)
-        .required('Name is required'),
+        .required('Debe ingresar su nombre'),
       password: Yup
         .string()
         .min(7)
         .max(255)
-        .required('Password is required'),
+        .required('Debe ingresar una contraseña'),
       policy: Yup
         .boolean()
         .oneOf([true], 'This field must be checked')
