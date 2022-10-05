@@ -18,13 +18,13 @@ export const JWTLogin = (props) => {
     validationSchema: Yup.object({
       email: Yup
         .string()
-        .email('Must be a valid email')
+        .email('Correo inválido')
         .max(255)
-        .required('Email is required'),
+        .required('Debe de ingresar un correo'),
       password: Yup
         .string()
         .max(255)
-        .required('Password is required')
+        .required('Debe ingresar una contraseña')
     }),
     onSubmit: async (values, helpers) => {
       try {
@@ -57,7 +57,7 @@ export const JWTLogin = (props) => {
         error={Boolean(formik.touched.email && formik.errors.email)}
         fullWidth
         helperText={formik.touched.email && formik.errors.email}
-        label="Email Address"
+        label="Correo electrónico"
         margin="normal"
         name="email"
         onBlur={formik.handleBlur}
@@ -69,7 +69,7 @@ export const JWTLogin = (props) => {
         error={Boolean(formik.touched.password && formik.errors.password)}
         fullWidth
         helperText={formik.touched.password && formik.errors.password}
-        label="Password"
+        label="Contraseña"
         margin="normal"
         name="password"
         onBlur={formik.handleBlur}
@@ -92,7 +92,7 @@ export const JWTLogin = (props) => {
           type="submit"
           variant="contained"
         >
-          Log In
+          Ingresar
         </Button>
       </Box>
       <Box sx={{ mt: 2 }}>
@@ -102,7 +102,7 @@ export const JWTLogin = (props) => {
             {' '}
             <b>empresaurios@dev.com</b>
             {' '}
-            and password
+            y la contraseña
             {' '}
             <b>Empresaurios123!</b>
           </div>

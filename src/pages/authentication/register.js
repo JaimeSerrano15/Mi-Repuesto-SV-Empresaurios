@@ -33,7 +33,7 @@ const Register = () => {
     <>
       <Head>
         <title>
-          Register | Material Kit Pro
+          Register
         </title>
       </Head>
       <Box
@@ -45,7 +45,7 @@ const Register = () => {
           minHeight: '100vh'
         }}
       >
-        <AuthBanner />
+        {/* <AuthBanner /> */}
         <Container
           maxWidth="sm"
           sx={{
@@ -55,40 +55,6 @@ const Register = () => {
             }
           }}
         >
-          <Box
-            sx={{
-              alignItems: 'center',
-              backgroundColor: (theme) => theme.palette.mode === 'dark'
-                ? 'neutral.900'
-                : 'neutral.100',
-              borderColor: 'divider',
-              borderRadius: 1,
-              borderStyle: 'solid',
-              borderWidth: 1,
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'space-between',
-              mb: 4,
-              p: 2,
-              '& > img': {
-                height: 32,
-                width: 'auto',
-                flexGrow: 0,
-                flexShrink: 0
-              }
-            }}
-          >
-            <Typography
-              color="textSecondary"
-              variant="caption"
-            >
-              The app authenticates via {platform}
-            </Typography>
-            <img
-              alt="Auth platform"
-              src={platformIcons[platform]}
-            />
-          </Box>
           <Card
             elevation={16}
             sx={{ p: 4 }}
@@ -101,28 +67,8 @@ const Register = () => {
                 justifyContent: 'center'
               }}
             >
-              <NextLink
-                href="/"
-                passHref
-              >
-                <a>
-                  <Logo
-                    sx={{
-                      height: 40,
-                      width: 40
-                    }}
-                  />
-                </a>
-              </NextLink>
               <Typography variant="h4">
-                Register
-              </Typography>
-              <Typography
-                color="textSecondary"
-                sx={{ mt: 2 }}
-                variant="body2"
-              >
-                Register on the internal platform
+                Registrarse en Mi Repuesto SV
               </Typography>
             </Box>
             <Box
@@ -131,9 +77,9 @@ const Register = () => {
                 mt: 3
               }}
             >
-              {platform === 'Amplify' && <AmplifyRegister />}
+              {/* {platform === 'Amplify' && <AmplifyRegister />}
               {platform === 'Auth0' && <Auth0Register />}
-              {platform === 'Firebase' && <FirebaseRegister />}
+              {platform === 'Firebase' && <FirebaseRegister />} */}
               {platform === 'JWT' && <JWTRegister />}
             </Box>
             <Divider sx={{ my: 3 }} />
@@ -148,7 +94,7 @@ const Register = () => {
                   color="textSecondary"
                   variant="body2"
                 >
-                  Having an account
+                  ¿Ya tienes cuenta? ¡Ingresa para buscar los que necesitas!
                 </Link>
               </NextLink>
             </div>
