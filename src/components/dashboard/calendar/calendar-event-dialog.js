@@ -15,7 +15,7 @@ import {
   TextField,
   Typography
 } from '@mui/material';
-import { DateTimePicker } from '@mui/lab';
+// import { DateTimePicker } from '@mui/lab';
 import { Trash as TrashIcon } from '../../../icons/trash';
 import { createEvent, deleteEvent, updateEvent } from '../../../slices/calendar';
 import { useDispatch } from '../../../store';
@@ -193,7 +193,7 @@ export const CalendarEventDialog = (props) => {
             />
           </Box>
           <Box sx={{ mt: 2 }}>
-            <DateTimePicker
+            {/* <DateTimePicker
               label="Start date"
               onChange={handleStartDateChange}
               renderInput={(inputProps) => (
@@ -202,7 +202,7 @@ export const CalendarEventDialog = (props) => {
                   {...inputProps} />
               )}
               value={formik.values.start}
-            />
+            /> */}
           </Box>
           <Box sx={{ mt: 2 }}>
             <DateTimePicker

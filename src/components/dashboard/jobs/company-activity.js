@@ -2,14 +2,14 @@ import NextLink from 'next/link';
 import PropTypes from 'prop-types';
 import { format } from 'date-fns';
 import { Avatar, Box, Button, Link, Typography } from '@mui/material';
-import {
-  Timeline,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineItem,
-  TimelineSeparator
-} from '@mui/lab';
+// import {
+//   Timeline,
+//   TimelineConnector,
+//   TimelineContent,
+//   TimelineDot,
+//   TimelineItem,
+//   TimelineSeparator
+// } from '@mui/lab';
 import { getInitials } from '../../../utils/get-initials';
 
 const getActivityContent = (activity) => {
@@ -118,7 +118,7 @@ export const CompanyActivity = (props) => {
 
   return (
     <div {...other}>
-      <div>
+      {/* <div>
         <Typography variant="h6">
           Activity
         </Typography>
@@ -176,7 +176,7 @@ export const CompanyActivity = (props) => {
         <Button>
           Load more
         </Button>
-      </Box>
+      </Box> */}
     </div>
   );
 };

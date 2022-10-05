@@ -9,7 +9,7 @@ import {
   TextField,
   Typography
 } from '@mui/material';
-import { DateTimePicker } from '@mui/lab';
+// import { DateTimePicker } from '@mui/lab';
 
 export const InputMixed = () => (
   <Box
@@ -30,7 +30,7 @@ export const InputMixed = () => (
       </Typography>
     </Box>
     <Box sx={{ mt: 3 }}>
-      <DateTimePicker
+      {/* <DateTimePicker
         label="Start date"
         onChange={() => { }}
         renderInput={(inputProps) => (
@@ -39,7 +39,7 @@ export const InputMixed = () => (
             {...inputProps} />
         )}
         value={new Date()}
-      />
+      /> */}
     </Box>
     <Box sx={{ mt: 3 }}>
       <FormControl

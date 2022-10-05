@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Box, Button, Divider, FormControlLabel, Switch, TextField } from '@mui/material';
-import { DateTimePicker } from '@mui/lab';
+// import { DateTimePicker } from '@mui/lab';
 
 export const Form6 = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -34,7 +34,7 @@ export const Form6 = () => {
           />
         </Box>
         <Box sx={{ mt: 2 }}>
-          <DateTimePicker
+          {/* <DateTimePicker
             onChange={(newDate) => setStartDate(newDate)}
             label="Start date"
             renderInput={(inputProps) => (
@@ -43,10 +43,10 @@ export const Form6 = () => {
                 {...inputProps} />
             )}
             value={startDate}
-          />
+          /> */}
         </Box>
         <Box sx={{ mt: 2 }}>
-          <DateTimePicker
+          {/* <DateTimePicker
             onChange={(newDate) => setEndDate(newDate)}
             label="End date"
             renderInput={(inputProps) => (
@@ -55,7 +55,7 @@ export const Form6 = () => {
                 {...inputProps} />
             )}
             value={endDate}
-          />
+          /> */}
         </Box>
         <Divider sx={{ my: 2 }} />
         <Box

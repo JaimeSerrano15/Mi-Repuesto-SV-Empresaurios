@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Box, Button, Chip, InputAdornment, TextField, Typography } from '@mui/material';
-import MobileDatePicker from '@mui/lab/MobileDatePicker';
+// import MobileDatePicker from '@mui/lab/MobileDatePicker';
 import { ArrowRight as ArrowRightIcon } from '../../../icons/arrow-right';
 
 export const JobDetailsStep = (props) => {
@@ -94,21 +94,21 @@ export const JobDetailsStep = (props) => {
             mt: 3
           }}
         >
-          <MobileDatePicker
+          {/* <MobileDatePicker
             label="Start Date"
             inputFormat="MM/dd/yyyy"
             value={startDate}
             onChange={handleStartDateChange}
             renderInput={(inputProps) => <TextField {...inputProps} />}
-          />
+          /> */}
           <Box sx={{ ml: 2 }}>
-            <MobileDatePicker
+            {/* <MobileDatePicker
               label="End Date"
               inputFormat="MM/dd/yyyy"
               value={endDate}
               onChange={handleEndDateChange}
               renderInput={(inputProps) => <TextField {...inputProps} />}
-            />
+            /> */}
           </Box>
         </Box>
       </Box>

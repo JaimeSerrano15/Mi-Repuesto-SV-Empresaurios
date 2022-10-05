@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import { format, subHours } from 'date-fns';
 import { Avatar, Button, Card, CardContent, CardHeader, Divider, Typography } from '@mui/material';
-import {
-  Timeline,
-  TimelineConnector,
-  TimelineContent,
-  TimelineDot,
-  TimelineItem,
-  TimelineSeparator
-} from '@mui/lab';
+// import {
+//   Timeline,
+//   TimelineConnector,
+//   TimelineContent,
+//   TimelineDot,
+//   TimelineItem,
+//   TimelineSeparator
+// } from '@mui/lab';
 import { ShoppingCart as ShoppingCartIcon } from '../../../icons/shopping-cart';
 
 const activities = [
@@ -30,7 +30,7 @@ export const OrderLogs = (props) => {
     <Card {...other}>
       <CardHeader title="Logs" />
       <Divider />
-      <CardContent>
+      {/* <CardContent>
         <Timeline
           sx={{
             m: 0,
@@ -84,7 +84,7 @@ export const OrderLogs = (props) => {
         <Button sx={{ mt: 2 }}>
           Load more
         </Button>
-      </CardContent>
+      </CardContent> */}
     </Card>
   );
 };

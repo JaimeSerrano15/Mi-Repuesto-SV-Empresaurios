@@ -15,7 +15,7 @@ import {
   useMediaQuery
 } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { DatePicker } from '@mui/lab';
+// import { DatePicker } from '@mui/lab';
 import { Search as SearchIcon } from '../../../icons/search';
 import { X } from '../../../icons/x';
 import { Scrollbar } from '../../scrollbar';
@@ -164,7 +164,7 @@ export const InvoiceListFilters = (props) => {
         spacing={2}
         sx={{ mt: 2 }}
       >
-        <DatePicker
+        {/* <DatePicker
           inputFormat="dd/MM/yyyy"
           label="From"
           onChange={handleStartDateChange}
@@ -177,7 +177,7 @@ export const InvoiceListFilters = (props) => {
           onChange={handleEndDateChange}
           renderInput={(inputProps) => <TextField {...inputProps} />}
           value={filters.endDate}
-        />
+        /> */}
       </Stack>
       <Typography
         color="textSecondary"
