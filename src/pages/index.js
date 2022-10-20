@@ -31,6 +31,8 @@ import { Reports as ReportsIcon } from '../icons/reports';
 import { Users as UsersIcon } from '../icons/users';
 import { gtm } from '../lib/gtm';
 
+import { HomePage } from '../components/Inicio';
+
 const Overview = () => {
   const [displayBanner, setDisplayBanner] = useState(true);
 
@@ -60,7 +62,7 @@ const Overview = () => {
             Mi Repuesto SV | Inicio  
         </title>
       </Head>
-
+      <HomePage />
     </>
   );
 };

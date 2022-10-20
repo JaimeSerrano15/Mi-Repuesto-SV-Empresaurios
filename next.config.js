@@ -9,6 +9,9 @@
 // ]);
 
 module.exports = {
+  images: {
+    domains: ['kashimasystem.com'],
+  },
   reactStrictMode: true,
   webpack(config) {
     config.module.rules.push({
