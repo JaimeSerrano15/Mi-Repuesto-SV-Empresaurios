@@ -4,7 +4,9 @@ import Head from 'next/head';
 import {
   Box,
   Typography,
-  Grid
+  Grid,
+  Button,
+  TextField,
 } from '@mui/material';
 import { AuthGuard } from '../../components/authentication/auth-guard';
 import { DashboardLayout } from '../../components/dashboard/dashboard-layout';
@@ -19,11 +21,21 @@ import { hardCodedData } from '../../helpers/exampleData'
 import { applyFilters, applyPagination } from '../../helpers/filter-helpers'
 
 const Products = () => {
-  const [search, setSearch] = useState("")
-  const [page, setPage] = useState(0)
-  const [filter, setFilter] = useState("Todas")
+  const [search, setSearch] = useState("");
+  const [page, setPage] = useState(0);
+  const [filter, setFilter] = useState("Todas");
+  const [brand, setBrand] = useState("Todas");
+  const [year, setYear] = useState("");
+  const [noFilters, setNoFilters] = useState(true);
+  console.log({year})
 
-  const filteredProducts = filter === "Todas" ? hardCodedData : hardCodedData.filter(product => product.category === filter )
+  const getProducts = () => {
+    const byBrand = brand === "Todas" ? hardCodedData : hardCodedData.filter(product => product.brand === brand);
+    const byCategory = filter === "Todas" ? byBrand : byBrand.filter(product => product.category === filter);
+    const byYear = year === "" ? byCategory : byCategory.filter(product => product.year === year);
+    return byYear;
+  }
+  const filteredProducts = noFilters ? hardCodedData : getProducts();
   const searchedProducts = applyFilters(filteredProducts, search);
 
   const paginatedProducts = applyPagination(
@@ -31,6 +43,20 @@ const Products = () => {
     page,
     9
   );
+
+  const ClearFilter = () => {
+    setFilter("Todas");
+    setBrand("Todas");
+    setYear("")
+  }
+
+  useEffect(() => {
+    if(filter === "Todas" && brand === "Todas" && year === "") {
+      setNoFilters(true);
+    } else {
+      setNoFilters(false);
+    }
+  }, [filter, brand, year])
 
   return (
     <>
@@ -77,6 +103,29 @@ const Products = () => {
               title="Categoría"
             />
           </Box>
+        </Box>
+        <Box sx={{
+          display: 'flex',
+        }}>
+            <FilterMenu 
+              filter={brand}
+              setFilter={setBrand}
+              options={["Todas", "Toyota", "Nissan", "Kia", "Mitsubishi", "Ford", "Chevrolete", "BMW", ""]}
+              title="Marca"
+            />
+            <TextField 
+              onChange={(e) => setYear(e.target.value) }
+              value={year}
+            />
+            <Button onClick={ClearFilter}>
+              Borrar Filtros
+            </Button>
+          {/* <FilterMenu 
+              filter={filter}
+              setFilter={setFilter}
+              options={["Todas", "Carrocería", "Luces", "Cristales"]}
+              title="Categoría"
+            /> */}
         </Box>
         <Box
           sx={{

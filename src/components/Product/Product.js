@@ -40,8 +40,9 @@ export const Product = ({ product }) => {
                         minHeight: '80px'
                     }}
                 >
-                    {product.category}
+                    {product.category} {product.brand} {product.year}
                 </Typography>
+                
             </Box>
             <Typography
                 variant="body2"
