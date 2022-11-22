@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import NextLink from 'next/link';
 import {
   Box,
   Typography,
@@ -18,10 +18,22 @@ const Auction = () => {
             Subastas
         </title>
       </Head>
-      <Box>
-        <Typography>
-            Pantalla de Subastas
-        </Typography>
+      <Box style={{ 
+        display: 'flex',
+      }}>
+      <NextLink href="https://auction-empresaurios-one.herokuapp.com/">
+        <Button style={{
+          border: '1px solid gray',
+          borderRadius: '10px',
+          boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
+          marginTop: '10px',
+          marginLeft: '20px',
+        }}>
+          <Typography style={{ fontSize: '1.5rem' }}>
+            Ir a panel de subastas
+          </Typography>
+        </Button>
+      </NextLink>
       </Box>
     </>
   );

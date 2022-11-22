@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import NextLink from 'next/link';
 
 import {
     Box,
@@ -7,18 +8,20 @@ import {
 } from '@mui/material';
 
 const Pressable = (props) => {
-  const { title, sx, icon } = props
+  const { title, sx, icon, path } = props
   return (
-    <Button
-        sx={{ ...sx, width: '200px' }}
-    >
-        <Box>
-            {icon}
-        </Box>
-        <Box>
-            {title}
-        </Box>
-    </Button>
+    <NextLink href={path}>
+        <Button
+            sx={{ ...sx, width: '200px' }}
+        >
+            <Box>
+                {icon}
+            </Box>
+            <Box>
+                {title}
+            </Box>
+        </Button>
+    </NextLink>
   );
 }
 

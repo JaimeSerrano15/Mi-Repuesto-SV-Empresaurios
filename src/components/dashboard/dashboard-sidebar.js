@@ -53,7 +53,7 @@ const getSections = (t) => [
       },
       {
         title: t('Subastas'),
-        path: '/subastas',
+        path: 'https://auction-empresaurios-one.herokuapp.com/',
         icon: <GavelIcon fontSize="small" />
       },
       {

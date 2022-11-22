@@ -32,6 +32,7 @@ const HomePage = () => {
                             flexDirection: 'column'
                         }}
                         icon={<CarRepairIcon fontSize="large" />}
+                        path="/productos"
                     />
                 </Grid>
                 <Grid item>
@@ -46,6 +47,7 @@ const HomePage = () => {
                             flexDirection: 'column'
                         }}
                         icon={<HardwareIcon fontSize="large" />}
+                        path="/"
                     />
                 </Grid>
                 <Grid item sx={3}>
@@ -60,6 +62,7 @@ const HomePage = () => {
                             flexDirection: 'column'
                         }}
                         icon={<GavelIcon fontSize="large" />}
+                        path="https://auction-empresaurios-one.herokuapp.com/"
                     />
 
                 </Grid>
@@ -75,6 +78,7 @@ const HomePage = () => {
                             flexDirection: 'column'
                         }}
                         icon={<FeaturedPlayListIcon fontSize="large" />}
+                        path="/"
                     />
                 </Grid>
             </Grid>
