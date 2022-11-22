@@ -66,21 +66,6 @@ const HomePage = () => {
                     />
 
                 </Grid>
-                <Grid item sx={3}>
-                    <Pressable 
-                        title="Tus subastas" 
-                        sx={{ 
-                            py: 4, mx: 4, 
-                            borderRadius: 4, 
-                            border: '1px solid rgba(0, 0, 0, 0.1)', 
-                            boxShadow: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
-                            display: 'flex',
-                            flexDirection: 'column'
-                        }}
-                        icon={<FeaturedPlayListIcon fontSize="large" />}
-                        path="/"
-                    />
-                </Grid>
             </Grid>
             
         </Box>
