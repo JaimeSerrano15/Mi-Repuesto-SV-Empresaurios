@@ -69,6 +69,7 @@ export const Product = ({ product }) => {
             >
                 <img src={product.img} alt={product.name} width="200px" height="150px" />
             </Box>
+
         </Box>
     )
 }

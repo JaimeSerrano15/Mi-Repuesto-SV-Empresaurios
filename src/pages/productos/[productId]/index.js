@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { AuthGuard } from '../../../components/authentication/auth-guard';
 import { DashboardLayout } from '../../../components/dashboard/dashboard-layout'
+import Map from '../../../components/Map'
 
 import { hardCodedData } from '../../../helpers/exampleData';
 
@@ -114,6 +115,7 @@ const ProductDetail = () => {
                     </Box>
                 </Grid>
             </Grid>
+            <Map />
         </Box>
         </>
     );
